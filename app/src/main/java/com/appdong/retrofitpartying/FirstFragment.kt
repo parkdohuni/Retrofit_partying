@@ -1,0 +1,34 @@
+package com.appdong.retrofitpartying
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.View.inflate
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import com.appdong.retrofitpartying.databinding.FirstFragmentBinding
+
+class FirstFragment: Fragment() {
+
+    private lateinit var binding: FirstFragmentBinding
+    private lateinit var navController: NavController
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View {
+        binding = FirstFragmentBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        navController = Navigation.findNavController(view)
+
+        binding.getData.setOnClickListener {
+
+        }
+    }
+}
